@@ -7,5 +7,6 @@ import org.springframework.boot.runApplication
 class SpringTransactionApplication
 
 fun main(args: Array<String>) {
-    runApplication<SpringTransactionApplication>(*args)
+    val context = runApplication<SpringTransactionApplication>(*args)
+    context.getBean(TransactionDef::class.java).execute()
 }
