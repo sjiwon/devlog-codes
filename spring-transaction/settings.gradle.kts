@@ -17,3 +17,9 @@ pluginManagement {
         }
     }
 }
+
+include(
+    "transaction-abstraction",
+    "transaction-sync",
+    "transaction-propagation",
+)

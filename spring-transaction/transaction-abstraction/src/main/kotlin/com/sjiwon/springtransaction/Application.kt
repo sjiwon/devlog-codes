@@ -4,9 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SpringTransactionApplication
+class Application
 
 fun main(args: Array<String>) {
-    val context = runApplication<SpringTransactionApplication>(*args)
-    context.getBean(TransactionDef::class.java).execute()
+    runApplication<Application>(*args)
 }
