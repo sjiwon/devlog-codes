@@ -14,7 +14,6 @@ class TransactionMandatoryTest(
 ) {
     @Test
     fun `기존 트랜잭션 X`() {
-//        main.case1()
         shouldThrow<IllegalTransactionStateException> { main.case1() }
     }
 

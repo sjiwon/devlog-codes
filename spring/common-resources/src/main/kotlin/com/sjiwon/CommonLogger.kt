@@ -1,4 +1,4 @@
-package com.sjiwon.tx
+package com.sjiwon
 
 import org.slf4j.LoggerFactory
 

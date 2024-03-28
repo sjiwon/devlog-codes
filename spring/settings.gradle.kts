@@ -19,8 +19,12 @@ pluginManagement {
 }
 
 include(
+    "common-resources",
+
     "transaction:yml-resources",
     "transaction:abstraction",
     "transaction:sync",
     "transaction:propagation",
+
+    "concurrency:ticket-concurrency-with-synchronized",
 )

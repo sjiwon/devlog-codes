@@ -1,6 +1,6 @@
 package com.sjiwon.tx._02_requires_new
 
-import com.sjiwon.tx.logger
+import com.sjiwon.logger
 import org.slf4j.Logger
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional

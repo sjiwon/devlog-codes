@@ -1,7 +1,7 @@
 package com.sjiwon.tx._07_nested
 
+import com.sjiwon.logger
 import com.sjiwon.tx.TxException
-import com.sjiwon.tx.logger
 import org.slf4j.Logger
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Propagation
