@@ -19,6 +19,7 @@ pluginManagement {
 }
 
 include(
+    "yml-resources",
     "transaction-abstraction",
     "transaction-sync",
     "transaction-propagation",

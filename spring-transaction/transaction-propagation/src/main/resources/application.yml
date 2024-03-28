@@ -1,5 +1,4 @@
-logging:
-  level:
-    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
-    org.springframework.jdbc.support.JdbcTransactionManager: DEBUG
-    org.hibernate.resource.transaction: DEBUG
+spring:
+  config:
+    import:
+      - log.yml
