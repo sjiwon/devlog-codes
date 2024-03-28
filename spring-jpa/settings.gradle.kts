@@ -17,7 +17,3 @@ pluginManagement {
         }
     }
 }
-
-include(
-    "jpa-mistake-with-persist-entity",
-)
