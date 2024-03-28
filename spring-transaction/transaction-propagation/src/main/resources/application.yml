@@ -1,0 +1,4 @@
+logging:
+  level:
+    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+    org.hibernate.resource.transaction: DEBUG
