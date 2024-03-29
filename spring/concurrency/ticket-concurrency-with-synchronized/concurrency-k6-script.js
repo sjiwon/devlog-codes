@@ -12,10 +12,11 @@ export const options = {
 };
 
 export default function () {
+    const url = "http://localhost/api/v2/tickets/1/purchase"
     const data = {
         "amount": 5
     }
-    const res = http.post("http://localhost/api/v1/tickets/1/purchase", JSON.stringify(data), {
+    const res = http.post(url, JSON.stringify(data), {
         headers: {
             "Content-Type": "application/json"
         },
