@@ -20,6 +20,7 @@ class LoggingAop(
             !execution(* com.sjiwon.logging.global.config..*(..))
             && !execution(* com.sjiwon.logging.global.decorator..*(..))
             && !execution(* com.sjiwon.logging.global.filter..*(..))
+            && !execution(* com.sjiwon.logging.global.interceptor..*(..))
             && !execution(* com.sjiwon.logging.global.log..*(..))
         """,
     )

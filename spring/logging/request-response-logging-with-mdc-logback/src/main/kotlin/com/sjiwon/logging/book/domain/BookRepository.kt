@@ -1,4 +1,4 @@
-package com.sjiwon.logging.entrypoint.domain
+package com.sjiwon.logging.book.domain
 
 interface BookRepository {
     fun save(book: Book): Book

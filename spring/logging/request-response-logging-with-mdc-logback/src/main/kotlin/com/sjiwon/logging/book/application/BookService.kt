@@ -1,7 +1,7 @@
-package com.sjiwon.logging.entrypoint.application
+package com.sjiwon.logging.book.application
 
-import com.sjiwon.logging.entrypoint.domain.Book
-import com.sjiwon.logging.entrypoint.domain.BookRepository
+import com.sjiwon.logging.book.domain.Book
+import com.sjiwon.logging.book.domain.BookRepository
 import org.springframework.stereotype.Service
 
 @Service

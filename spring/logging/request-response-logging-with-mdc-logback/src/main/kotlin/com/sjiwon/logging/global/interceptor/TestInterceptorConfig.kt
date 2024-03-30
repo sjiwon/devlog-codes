@@ -1,4 +1,4 @@
-package com.sjiwon.logging.interceptor
+package com.sjiwon.logging.global.interceptor
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.context.annotation.Configuration

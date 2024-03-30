@@ -3,11 +3,9 @@ package com.sjiwon.logging.global.filter
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import org.springframework.stereotype.Component
 import org.springframework.web.filter.OncePerRequestFilter
 import org.springframework.web.util.ContentCachingResponseWrapper
 
-@Component
 class RequestResponseCachingFilter : OncePerRequestFilter() {
     override fun doFilterInternal(
         request: HttpServletRequest,

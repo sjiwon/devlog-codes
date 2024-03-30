@@ -1,4 +1,4 @@
-package com.sjiwon.logging.interceptor
+package com.sjiwon.logging.global.interceptor
 
 import com.sjiwon.logger
 import jakarta.servlet.http.HttpServletRequest

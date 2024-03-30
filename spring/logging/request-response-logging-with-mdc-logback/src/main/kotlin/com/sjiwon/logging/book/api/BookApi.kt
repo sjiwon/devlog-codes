@@ -1,7 +1,7 @@
-package com.sjiwon.logging.entrypoint.api
+package com.sjiwon.logging.book.api
 
-import com.sjiwon.logging.entrypoint.application.BookService
-import com.sjiwon.logging.entrypoint.domain.Book
+import com.sjiwon.logging.book.application.BookService
+import com.sjiwon.logging.book.domain.Book
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController

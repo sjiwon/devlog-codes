@@ -1,7 +1,7 @@
-package com.sjiwon.logging.entrypoint.infrastructure
+package com.sjiwon.logging.book.infrastructure
 
-import com.sjiwon.logging.entrypoint.domain.Book
-import com.sjiwon.logging.entrypoint.domain.BookRepository
+import com.sjiwon.logging.book.domain.Book
+import com.sjiwon.logging.book.domain.BookRepository
 import org.springframework.stereotype.Repository
 import java.lang.reflect.Field
 import java.util.concurrent.ConcurrentHashMap
