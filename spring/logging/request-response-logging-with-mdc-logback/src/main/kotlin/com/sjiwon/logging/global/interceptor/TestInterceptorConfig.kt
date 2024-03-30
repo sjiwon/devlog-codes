@@ -15,6 +15,6 @@ class TestInterceptorConfig(
 //        registry.addInterceptor(HttpRequestInterceptor(objectMapper))
 //        registry.addInterceptor(HttpResponseInterceptor(objectMapper))
 //        registry.addInterceptor(HttpCachingInterceptorV1(objectMapper))
-        registry.addInterceptor(HttpCachingInterceptorV2(objectMapper))
+//        registry.addInterceptor(HttpCachingInterceptorV2(objectMapper))
     }
 }
