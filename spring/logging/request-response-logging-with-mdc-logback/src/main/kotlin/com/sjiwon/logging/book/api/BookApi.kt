@@ -14,7 +14,7 @@ class BookApi(
         val name: String,
     )
 
-    @PostMapping
+    @PostMapping("/api/v1/books")
     fun save(
         @RequestBody request: Request,
     ): Book = bookService.save(request.name)
