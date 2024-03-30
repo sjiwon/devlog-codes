@@ -27,4 +27,6 @@ include(
     "transaction:propagation",
 
     "concurrency:ticket-concurrency-with-synchronized",
+
+    "logging:request-response-logging-with-mdc-logback",
 )
