@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletResponse
 import org.springframework.web.filter.OncePerRequestFilter
 import org.springframework.web.util.ContentCachingResponseWrapper
 
-class RequestResponseCachingFilter : OncePerRequestFilter() {
+class CachingDataFilter : OncePerRequestFilter() {
     override fun doFilterInternal(
         request: HttpServletRequest,
         response: HttpServletResponse,

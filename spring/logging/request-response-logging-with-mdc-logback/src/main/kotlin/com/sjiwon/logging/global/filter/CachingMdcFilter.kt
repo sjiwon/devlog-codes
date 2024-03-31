@@ -20,7 +20,7 @@ import org.slf4j.MDC
 import java.time.LocalDateTime
 import java.util.*
 
-class MdcLoggingFilter : Filter {
+class CachingMdcFilter : Filter {
     override fun doFilter(
         request: ServletRequest,
         response: ServletResponse,

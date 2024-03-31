@@ -22,7 +22,7 @@ import org.springframework.web.cors.CorsUtils
 import org.springframework.web.util.ContentCachingResponseWrapper
 import java.nio.charset.StandardCharsets
 
-class RequestLoggingFilter(
+class LoggingDataFilter(
     private val loggingStatusManager: LoggingStatusManager,
     vararg ignoredUrls: String,
 ) : Filter {
