@@ -21,14 +21,16 @@ pluginManagement {
 include(
     "common-resources",
 
-    "transaction:yml-resources",
-    "transaction:abstraction",
-    "transaction:sync",
-    "transaction:propagation",
+    "aop:aspect-module-with-proxy-based-annotation",
 
     "concurrency:ticket-concurrency-with-synchronized",
 
     "logging:request-response-logging-with-mdc-logback",
 
     "tomcat:core-settings",
+
+    "transaction:yml-resources",
+    "transaction:abstraction",
+    "transaction:sync",
+    "transaction:propagation",
 )
