@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:aspect;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+
+logging:
+  level:
+    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+    org.hibernate.resource.transaction: DEBUG
+    org.springframework.data.redis.core.RedisConnectionUtils: DEBUG

@@ -18,7 +18,7 @@ class ExtractCommonLogicRedisTxAop(
 ) {
     @Transactional
     @Around("@annotation(com.sjiwon.aspect.redis.ExtractCommonLogicRedisTxTypeA)")
-    fun typeA(joinPoint: ProceedingJoinPoint): Any {
+    fun typeA(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRedisTxTypeA")
         val executor = nonTxTemplate.opsForValue()
         executor.set("typeA-nonTxTemplate-1", "success")
@@ -29,24 +29,24 @@ class ExtractCommonLogicRedisTxAop(
 
     @Transactional
     @Around("@annotation(com.sjiwon.aspect.redis.ExtractCommonLogicRedisTxTypeB)")
-    fun typeB(joinPoint: ProceedingJoinPoint): Any {
+    fun typeB(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRedisTxTypeB")
         val executor = txTemplate.opsForValue()
         executor.set("typeB-nonTxTemplate-1", "success")
         executor.set("typeB-nonTxTemplate-2", "success")
         executor.set("typeB-nonTxTemplate-3", "success")
-        return joinPoint.proceed()
+        throw RuntimeException()
     }
 
     @Around("@annotation(com.sjiwon.aspect.redis.ExtractCommonLogicRedisTxTypeC)")
-    fun typeC(joinPoint: ProceedingJoinPoint): Any {
+    fun typeC(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRedisTxTypeC")
         separateNonTxTemplate.invoke()
         return joinPoint.proceed()
     }
 
     @Around("@annotation(com.sjiwon.aspect.redis.ExtractCommonLogicRedisTxTypeD)")
-    fun typeD(joinPoint: ProceedingJoinPoint): Any {
+    fun typeD(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRedisTxTypeD")
         separateTxTemplate.invoke()
         return joinPoint.proceed()

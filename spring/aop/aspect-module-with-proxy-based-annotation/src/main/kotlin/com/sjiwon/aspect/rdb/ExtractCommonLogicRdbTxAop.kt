@@ -18,7 +18,7 @@ class ExtractCommonLogicRdbTxAop(
 ) {
     @Transactional
     @Around("@annotation(com.sjiwon.aspect.rdb.ExtractCommonLogicRdbTxTypeA)")
-    fun typeA(joinPoint: ProceedingJoinPoint): Any {
+    fun typeA(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRdbTxTypeA")
         memberRepository.saveAll(
             listOf(
@@ -31,14 +31,14 @@ class ExtractCommonLogicRdbTxAop(
     }
 
     @Around("@annotation(com.sjiwon.aspect.rdb.ExtractCommonLogicRdbTxTypeB)")
-    fun typeB(joinPoint: ProceedingJoinPoint): Any {
+    fun typeB(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRdbTxTypeB")
         separateRdbTransactionalComponent.invoke()
         return joinPoint.proceed()
     }
 
     @Around("@annotation(com.sjiwon.aspect.rdb.ExtractCommonLogicRdbTxTypeC)")
-    fun typeC(joinPoint: ProceedingJoinPoint): Any {
+    fun typeC(joinPoint: ProceedingJoinPoint): Any? {
         println("AOP - ExtractCommonLogicRdbTxTypeC")
         transactionTemplate.executeWithoutResult {
             memberRepository.saveAll(
