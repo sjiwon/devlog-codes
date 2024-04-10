@@ -25,6 +25,8 @@ include(
 
     "concurrency:ticket-concurrency-with-synchronized",
 
+    "jooq:start-with-flyway-testcontainers",
+
     "logging:request-response-logging-with-mdc-logback",
 
     "tomcat:core-settings",
