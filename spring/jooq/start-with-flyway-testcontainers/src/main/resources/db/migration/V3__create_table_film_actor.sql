@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS film_actor
 (
     `id`       BIGINT AUTO_INCREMENT PRIMARY KEY,
-    `actor_id` BIGINT NOT NULL,
-    `film_id`  BIGINT NOT NULL
+    `actor_id` BIGINT       NOT NULL,
+    `film_id`  BIGINT       NOT NULL,
+    `role`     VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB
   CHARSET = UTF8MB4;
 

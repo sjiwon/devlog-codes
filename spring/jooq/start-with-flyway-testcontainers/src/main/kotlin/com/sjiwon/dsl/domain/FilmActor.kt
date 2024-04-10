@@ -14,4 +14,5 @@ class FilmActor(
     val id: Long = 0L,
     val actorId: Long,
     val filmId: Long,
+    val role: String,
 )
