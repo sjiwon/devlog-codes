@@ -1,3 +1,12 @@
+import org.springframework.boot.gradle.tasks.bundling.BootJar
+
 dependencies {
-    implementation(project(":transaction:yml-resources"))
+}
+
+tasks.named<Jar>("jar") {
+    enabled = false
+}
+
+tasks.named<BootJar>("bootJar") {
+    enabled = true
 }

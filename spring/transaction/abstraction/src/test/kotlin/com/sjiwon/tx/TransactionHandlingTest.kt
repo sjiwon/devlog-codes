@@ -1,5 +1,6 @@
 package com.sjiwon.tx
 
+import com.sjiwon.IntegrationTest
 import com.sjiwon.tx.common.DatabaseCleanerEachCallbackExtension
 import com.sjiwon.tx.logic.JdbcComponent
 import com.sjiwon.tx.logic.JpaComponent
@@ -9,12 +10,9 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.TestConstructor
 
-@SpringBootTest
 @ExtendWith(DatabaseCleanerEachCallbackExtension::class)
-@TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
+@IntegrationTest
 class TransactionHandlingTest(
     private val jdbcComponent: JdbcComponent,
     private val jpaComponent: JpaComponent,

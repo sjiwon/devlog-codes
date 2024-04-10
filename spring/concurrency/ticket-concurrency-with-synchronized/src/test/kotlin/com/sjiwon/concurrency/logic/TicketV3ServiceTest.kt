@@ -1,22 +1,20 @@
 package com.sjiwon.concurrency.logic
 
-import com.sjiwon.concurrency.common.DatabaseCleanerEachCallbackExtension
+import com.sjiwon.IntegrationTest
+import com.sjiwon.concurrency.logic.common.DatabaseCleanerEachCallbackExtension
 import com.sjiwon.concurrency.model.Ticket
 import com.sjiwon.concurrency.model.TicketRepository
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.repository.findByIdOrNull
-import org.springframework.test.context.TestConstructor
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-@SpringBootTest
 @ExtendWith(DatabaseCleanerEachCallbackExtension::class)
-@TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
+@IntegrationTest
 class TicketV3ServiceTest(
     private val sut: TicketFacade,
     private val ticketRepository: TicketRepository,

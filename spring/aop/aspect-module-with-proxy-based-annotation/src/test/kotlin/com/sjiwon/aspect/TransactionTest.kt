@@ -1,5 +1,6 @@
 package com.sjiwon.aspect
 
+import com.sjiwon.IntegrationTest
 import com.sjiwon.aspect.common.DatabaseCleanerEachCallbackExtension
 import com.sjiwon.aspect.common.RedisCleanerEachCallbackExtension
 import com.sjiwon.aspect.common.RedisTestContainers
@@ -11,14 +12,11 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.test.context.ContextConfiguration
-import org.springframework.test.context.TestConstructor
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.post
 
-@TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @ContextConfiguration(
     initializers = [
@@ -30,7 +28,7 @@ import org.springframework.test.web.servlet.post
     RedisCleanerEachCallbackExtension::class,
 )
 @AutoConfigureMockMvc
-@SpringBootTest
+@IntegrationTest
 class TransactionTest(
     private val mockMvc: MockMvc,
     private val memberRepository: MemberRepository,

@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     id("org.springframework.boot")
@@ -29,6 +30,8 @@ subprojects {
     }
 
     dependencies {
+        implementation(project(":common-resources"))
+
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -47,5 +50,13 @@ subprojects {
 
     tasks.withType<Test> {
         useJUnitPlatform()
+    }
+
+    tasks.named<Jar>("jar") {
+        enabled = true
+    }
+
+    tasks.named<BootJar>("bootJar") {
+        enabled = false
     }
 }
