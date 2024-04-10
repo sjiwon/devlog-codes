@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType.IDENTITY
 import jakarta.persistence.Id
 import jakarta.persistence.Table
+import java.time.LocalDate
 
 @Entity
 @Table(name = "film")
@@ -14,6 +15,6 @@ class Film(
     val id: Long = 0L,
     val title: String,
     val description: String,
-    val release: Int,
+    val releaseDate: LocalDate,
     val length: Int,
 )
