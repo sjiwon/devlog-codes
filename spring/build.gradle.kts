@@ -30,8 +30,6 @@ subprojects {
     }
 
     dependencies {
-        implementation(project(":common-resources"))
-
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

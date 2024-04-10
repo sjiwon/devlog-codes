@@ -1,4 +1,4 @@
-package com.sjiwon.jooq
+package com.sjiwon.dsl
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
